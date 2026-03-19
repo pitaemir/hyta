@@ -2,5 +2,6 @@
   "Group": "Tutorial",
   "Name": "MiniRPGPlugin",
   "Version": "1.0.0",
-  "Main": "com.troubledev.RpgSystemsTutorial"
+  "Main": "com.troubledev.RpgSystemsTutorial",
+  "IncludesAssetPack": true
 }

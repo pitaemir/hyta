@@ -3,6 +3,8 @@ package com.troubledev.handlers;
 import com.troubledev.components.PlayerRPGComponent;
 import com.troubledev.events.GiveXPEvent;
 import com.troubledev.events.LevelUpEvent;
+import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.troubledev.ui.RpgXPHud;
 
 import java.util.function.Consumer;
 

@@ -9,6 +9,8 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.troubledev.components.PlayerRPGComponent;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
+import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.troubledev.ui.RpgXPHud;
 
 public class PlayerJoinSystem extends RefSystem<EntityStore> {
 
@@ -23,6 +25,11 @@ public class PlayerJoinSystem extends RefSystem<EntityStore> {
 
         var playerRef = store.getComponent(ref, PlayerRef.getComponentType());
         if (playerRef == null) return;
+
+        var player = store.getComponent(ref, Player.getComponentType());
+        if (player != null) {
+            player.getHudManager().setCustomHud(playerRef, new RpgXPHud(playerRef));
+        }
 
         var rpgType = PlayerRPGComponent.getComponentType();
         var rpg = store.getComponent(ref, rpgType);

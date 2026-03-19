@@ -23,7 +23,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * /rpg spawn - Spawns NPCs around the player for testing.
  *
  * Usage:
- *   /rpg spawn                     -> 5 Skeletons
+ *   /rpg spawn                     -> respawn player
  *   /rpg spawn --type Zombie       -> 5 Zombies
  *   /rpg spawn --count 10          -> 10 Skeletons
  *   /rpg spawn --type Kweebec --count 3
@@ -66,7 +66,8 @@ public class RpgSpawnCommand extends AbstractPlayerCommand {
         }
 
         var roleIndex = NPCPlugin.get().getIndex(npcType);
-        if (roleIndex < 0) {
+        int roleIndex1 = (int) roleIndex;
+        if (roleIndex1 < 0) {
             playerRef.sendMessage(Message.raw("Unknown NPC: %s".formatted(npcType)));
             return;
         }

@@ -20,23 +20,8 @@ public class RpgXPHud extends CustomUIHud {
     }
 
     public void refresh(PlayerRPGComponent rpg) {
-        int current = (int) rpg.getCurrentLevelXP();
-        int remaining = (int) rpg.getXPToNextLevel();
-        int totalInLevel = rpg.isMaxLevel() ? current : current + remaining;
-
-        int fillWidth = rpg.isMaxLevel()
-                ? BAR_MAX_WIDTH
-                : Math.max(0, Math.min(BAR_MAX_WIDTH, Math.round(BAR_MAX_WIDTH * rpg.getProgress())));
-
         UICommandBuilder ui = new UICommandBuilder();
-
-        ui.set("#LevelLabel.TextSpans", Message.raw("LV " + rpg.getLevel()));
-        ui.set("#XpText.TextSpans", Message.raw(current + " / " + totalInLevel + " XP"));
-
-        // estes caminhos são os que eu testaria primeiro na sua versão:
-        ui.set("#XpBarFill.Anchor.Width", fillWidth);
-        ui.set("#XpBarHighlight.Anchor.Width", fillWidth);
-
+        ui.set("#LevelLabel.TextSpans", Message.raw("Level " + rpg.getLevel()));
         update(false, ui);
     }
 }

@@ -21,7 +21,7 @@ public class GiveXPHandler implements Consumer<GiveXPEvent> {
 
         var oldLevel = rpg.getLevel();
         var leveledUp = rpg.addExperience(event.amount());
-
+        var player = store.getComponent(event.playerRef(), Player.getComponentType());
         if (leveledUp) {
             LevelUpEvent.dispatch(event.playerRef(), oldLevel, rpg.getLevel());
         }

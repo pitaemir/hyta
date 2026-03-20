@@ -38,6 +38,9 @@ public class PlayerJoinSystem extends RefSystem<EntityStore> {
             playerRef.sendMessage(Message.raw(
                     "Welcome back! Level %d (%d XP)".formatted(rpg.getLevel(), rpg.getTotalExperience())
             ));
+            var hud = new RpgXPHud(playerRef);
+            player.getHudManager().setCustomHud(playerRef, hud);
+            hud.refresh(rpg);
         } else {
             commandBuffer.addComponent(ref, rpgType, new PlayerRPGComponent());
             playerRef.sendMessage(Message.raw("Welcome! Your adventure begins at Level 1."));

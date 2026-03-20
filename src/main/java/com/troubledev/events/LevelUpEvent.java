@@ -25,5 +25,6 @@ public record LevelUpEvent(
         if (dispatcher.hasListener()) {
             dispatcher.dispatch(new LevelUpEvent(playerRef, oldLevel, newLevel));
         }
+        
     }
 }

@@ -22,7 +22,7 @@ public class GiveXPHandler implements Consumer<GiveXPEvent> {
         var leveledUp = rpg.addExperience(event.amount());
         var player = store.getComponent(event.playerRef(), Player.getComponentType());
 
-        // ✅ Atualiza a HUD depois de ganhar XP
+        //Atualiza a HUD depois de ganhar XP
         if (player != null) {
             var rawHud = player.getHudManager().getCustomHud();
             if (rawHud instanceof RpgXPHud hud) {

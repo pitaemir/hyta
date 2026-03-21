@@ -20,25 +20,29 @@ public class RpgXPHud extends CustomUIHud {
 
     @Override
     protected void build(UICommandBuilder ui) {
-        ui.append("RpgXPHud.ui");
-        if (rpg != null) {
-            int fillWidth = Math.round(rpg.getProgress() * BAR_MAX_WIDTH);
+      ui.append("RpgXPHud.ui");
+    if (rpg != null) {
+        int fillWidth = Math.round(rpg.getProgress() * BAR_MAX_WIDTH);
 
-            ui.set("#LevelLabel.TextSpans", Message.raw(" Level " + rpg.getLevel()));
-            ui.set("#XpText.TextSpans", Message.raw(
-                rpg.getCurrentLevelXP() + " / " + (rpg.getCurrentLevelXP() + rpg.getXPToNextLevel()) + " XP"
-            ));
+        ui.set("#LevelLabel.TextSpans", Message.raw(" Level " + rpg.getLevel()));
+        ui.set("#XpText.TextSpans", Message.raw(
+            rpg.getCurrentLevelXP() + " / " + (rpg.getCurrentLevelXP() + rpg.getXPToNextLevel()) + " XP"
+        ));
 
-            Anchor fillAnchor = new Anchor();
-            fillAnchor.setLeft(Value.of(1));
-            fillAnchor.setWidth(Value.of(fillWidth));
+        Anchor fillAnchor = new Anchor();
+        fillAnchor.setLeft(Value.of(1));
+        fillAnchor.setTop(Value.of(1));
+        fillAnchor.setHeight(Value.of(10));
+        fillAnchor.setWidth(Value.of(fillWidth));
 
-            Anchor highlightAnchor = new Anchor();
-            highlightAnchor.setLeft(Value.of(1));
-            highlightAnchor.setWidth(Value.of(fillWidth));
+        Anchor highlightAnchor = new Anchor();
+        highlightAnchor.setLeft(Value.of(1));
+        highlightAnchor.setTop(Value.of(1));
+        highlightAnchor.setHeight(Value.of(3));
+        highlightAnchor.setWidth(Value.of(fillWidth));
 
-            ui.setObject("#XpBarFill.Anchor", fillAnchor);
-            ui.setObject("#XpBarHighlight.Anchor", highlightAnchor);
+        ui.setObject("#XpBarFill.Anchor", fillAnchor);
+        ui.setObject("#XpBarHighlight.Anchor", highlightAnchor);
         }
     }
 

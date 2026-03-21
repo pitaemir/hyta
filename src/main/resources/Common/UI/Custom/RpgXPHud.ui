@@ -19,26 +19,26 @@ Group #Root {
 
   Label #XpText {
     Style: (TextColor: #d8dee9, FontSize: 14);
-    Anchor: (Left: 220, Top: 9, Width: 220, Height: 16);
+    Anchor: (Left: 200, Top: 9, Width: 220, Height: 16);
   }
 
   Group #BarOuter {
     Anchor: (Left: 12, Top: 29, Width: 292, Height: 12);
     Background: #0b0f14;
-  }
 
-  Group #BarInner {
-    Anchor: (Left: 1, Top: 1, Width: 290, Height: 10);
-    Background: #1d2430;
-  }
+    Group #BarInner {
+      Anchor: (Left: 1, Top: 1, Width: 290, Height: 10);
+      Background: #1d2430;
 
-  Group #XpBarFill {
-    Anchor: (Left: 1, Top: 1, Width: 0, Height: 10);
-    Background: #34d26a;
-  }
+      Group #XpBarFill {
+        Anchor: (Left: 1, Top: 1, Width: 0, Height: 10);
+        Background: #f4d35e;
+      }
 
-  Group #XpBarHighlight {
-    Anchor: (Left: 1, Top: 1, Width: 0, Height: 3);
-    Background: #8df7b0;
+      Group #XpBarHighlight {
+        Anchor: (Left: 1, Top: 1, Width: 0, Height: 3);
+        Background: #f7d559;
+      }
+    }
   }
 }

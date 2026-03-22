@@ -1,4 +1,4 @@
-# Legends of the Ascended (LotA)
+# Legends of the Ascended - LOA
 
 ![Hytale](https://img.shields.io/badge/Game-Hytale-purple)
 ![Framework](https://img.shields.io/badge/Framework-ECS-blue)
@@ -101,15 +101,7 @@ Stores persistent player data:
 
 - **XPGainSystem** → handles XP logic  
 - **PlayerJoinSystem** → initializes player data  
-- **Event + Handler system** → decoupled logic  
-
----
-
-### Custom UI (HUD)
-
-- Custom XP bar  
-- Real-time updates  
-- Integrated with progression system  
+- **Event + Handler system** → decoupled logic   
 
 ---
 
@@ -118,8 +110,7 @@ Stores persistent player data:
 Used for testing and debugging:
 
 - `/rpgxp` → grant XP  
-- `/rpgstats` → display player stats  
-- `/rpg` → base command  
+- `/rpgstats` → display player stats   
 
 ---
 
@@ -163,39 +154,6 @@ Used for testing and debugging:
 - [ ] Ascension system  
 - [ ] Content expansion  
 - [ ] Balancing & polish  
-
----
-
-## Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/legends-of-the-ascended.git
-```
-
----
-
-### 2. Configure environment
-
-- Import project using Gradle  
-- Ensure `HytaleServer.jar` is present in `/libs`  
-
----
-
-### 3. Run
-
-Start the Hytale modding environment with the project configured.
-
----
-
-## Future Improvements
-
-- Full build/class system  
-- Advanced skill trees  
-- Loot system tied to progression  
-- Dynamic world events  
-- System integration (XP + mastery + abilities)  
 
 ---
 

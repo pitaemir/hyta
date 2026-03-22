@@ -1,4 +1,4 @@
-# Legends of the Ascended (LotA)
+# Legends of the Ascended (LOA)
 
 ![Hytale](https://img.shields.io/badge/Game-Hytale-purple)
 ![Framework](https://img.shields.io/badge/Framework-ECS-blue)

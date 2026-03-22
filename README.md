@@ -5,7 +5,7 @@
 ![Language](https://img.shields.io/badge/Language-Java-orange)
 ![Status](https://img.shields.io/badge/Status-In_Development-yellow)
 
-A amodular **RPG progression system** for *Hytale*, focused on enhancing gameplay through player leveling and systemic progression.
+A modular **RPG progression system** for *Hytale*, focused on enhancing gameplay through player leveling and systemic progression.
 
 Built using an **Entity Component System (ECS)** architecture for scalability, organization, and maintainability.
 
